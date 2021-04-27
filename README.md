@@ -22,7 +22,7 @@ To initialize for Nexus 4 android source, you must run this command
     $ chmod a+x ~/bin/repo
     $ mkdir -p ~/src/build/android
     $ cd ~/src/build/android
-    $ repo init -u https://android.googlesource.com/platform/manifest -b android-6.0.0_r26 -g default,flo,-fugu,-shamu,-flounder,-hammerhead,-bullhead,-angler -p linux
+    $ repo init -u https://android.googlesource.com/platform/manifest -b android-6.0.1_r81 -g default,flo,-fugu,-shamu,-flounder,-hammerhead,-bullhead,-angler -p linux
     
 
 After prepare android sources, add this file on **.repo/local_manifests/mako.xml**
@@ -32,19 +32,21 @@ After prepare android sources, add this file on **.repo/local_manifests/mako.xml
     <manifest>
       <remote  name="github_ganadist"
               fetch="https://github.com/ganadist/" />
-      <remote  name="github_callmealdy"
-              fetch="https://github.com/CallMeAldy/" />
+      <remote  name="github_aldrinholmes"
+              fetch="https://github.com/aldrinholmes/" />
+      <remote  name="github_yagyaxt1034"
+              fetch="https://github.com/yagyaxt1034/" />
 
       <remove-project name="platform/external/svox" />
 
       <project path="device/lge/mako" name="device_lge_mako"
-            remote="github_ganadist"
+            remote="github_yagyaxt1034"
             revision="mm-6.0"
             groups="device,mako,broadcom_pdk,generic_fs" />
 
       <project path="device/lge/occam" name="device_lge_occam"
-            remote="github_ganadist"
-            revision="android-6.0.0_r26"
+            remote="github_yagyaxt1034"
+            revision="android-6.0.1_r81"
             groups="device,mako,broadcom_pdk,generic_fs" />
 
       <project path="vendor/broadcom" name="mako_vendor_broadcom"
@@ -69,7 +71,7 @@ After prepare android sources, add this file on **.repo/local_manifests/mako.xml
         groups="device,mako,broadcom_pdk,generic_fs" />
 
       <project path="kernel/msm" name="kernel_lge_mako"
-            remote="github_callmealdy"
+            remote="github_aldrinholmes"
             revision="mm-6.0"
             groups="device,mako,broadcom_pdk,generic_fs" />
 
